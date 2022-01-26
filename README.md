@@ -1,10 +1,7 @@
-# Cratesmith.AssetUI
-Popout Inspector and ScriptableObject aware default Object Drawer for Unity3d.
+해당 시스템은 Cratesmith/Cratesmith.AssetUI의 Popup Inspector기능만 제겋한 것입니다.
 
-To install:
-1. Open the package manager window
-2. Click the add button in the top left
-3. Select "add from git url"
-4. Pate in the following url and press enter: https://github.com/Cratesmith/Cratesmith.AssetUI.git
-
-... or just check out the files and dump them somewhere in your project.
+설치 방법:
+1. 패키지 매니저를 오픈합니다.
+2. 왼쪽 상단에 add버튼을 누릅니다.
+3. 'add from git url'을 클릭합니다.
+4. 해당 깃 URL을 붙여넣고 추가합니다.
