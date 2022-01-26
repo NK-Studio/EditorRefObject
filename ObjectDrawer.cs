@@ -138,18 +138,7 @@ namespace cratesmith.assetui
 					propertyFieldRect.xMax -= singleButtonWidth;
 				}
 			}
-
-			// Draw "Popout window"
-			if (!property.hasMultipleDifferentValues && property.propertyType == SerializedPropertyType.ObjectReference)
-			{
-				if (property.objectReferenceValue)
-				{
-					Rect popoutBtnRect = new Rect(propertyFieldRect.xMax-singleButtonWidth, position.y, singleButtonWidth, EditorGUIUtility.singleLineHeight);
-					DrawPopoutInspector(popoutBtnRect, property, popupWindowRect);
-					propertyFieldRect.xMax -= singleButtonWidth;
-				}
-			}
-
+			
 			return propertyFieldRect;
 		}
 
@@ -266,22 +255,6 @@ namespace cratesmith.assetui
 			return width;
 		}
 
-		static void DrawPopoutInspector(Rect position, SerializedProperty property, Rect popupWindowRect)
-		{
-			if (property.objectReferenceValue != null && !property.hasMultipleDifferentValues)
-			{
-				bool wasEnabled = GUI.enabled;
-				GUI.enabled = true;
-  
-				if (ImageButton(position, ExpandButton, "Show in popout inspector..."))
-				{
-					PopupEditorWindow.Create(property.objectReferenceValue, popupWindowRect);
-				}
-
-				GUI.enabled = wasEnabled;
-			}
-		}
-
 		static bool DrawCreateScriptableObject(Rect position, SerializedProperty property, Rect popupWindowRect)
 		{
 			Type propType = property.GetSerializedPropertyType();
@@ -365,7 +338,6 @@ namespace cratesmith.assetui
 					                                    EditorGUIUtility.PingObject(instance);
 					                                    prop.objectReferenceValue = instance;
 					                                    prop.serializedObject.ApplyModifiedProperties();
-					                                    PopupEditorWindow.Create(prop.objectReferenceValue, popupWindowRect);
 				                                    },
 				                                    _options,
 				                                    defaultOutputPath,
