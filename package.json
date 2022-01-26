@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bnm000215/Cratesmith.AssetUI"
+		"url": "git+https://github.com/bnm000215/EditorRefObject"
 	},
 	"src": "Packages/NKStudio.EditorRefObject",
 	"author": "Kieran Lord <cratesmith@cratesmith.com> (https://github.com/cratesmith)",
