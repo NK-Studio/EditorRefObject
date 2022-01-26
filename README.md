@@ -1,4 +1,5 @@
-해당 시스템은 Cratesmith/Cratesmith.AssetUI의 Popup Inspector기능만 제겋한 것입니다.
+Cratesmith/Cratesmith.AssetUI의 Popup Inspector기능을 제거하고,
+DarrenHobern/Util을 추가한 포크입니다.
 
 설치 방법:
 1. 패키지 매니저를 오픈합니다.
